@@ -1,0 +1,109 @@
+{
+  "owner": "JUTZUGC",
+  "code": "JUTZUGC",
+  "project": {
+    "key": "dragshift",
+    "nameCn": "DragShift",
+    "repoName": "dragshift-deploy-guide",
+    "oneLiner": "拖起文件按一下 Shift，光标下弹出液体玻璃质感的径向菜单，松手就把转换或编辑做完",
+    "officialRepo": "https://github.com/llamaboi55/DragShift",
+    "officialDocs": "https://github.com/llamaboi55/DragShift#readme",
+    "stars": "430",
+    "license": "MIT",
+    "highlights": [
+      "零窗口操作：拖起来按 Shift 就出菜单",
+      "结果并排保存：永远不改原文件",
+      "两类菜单：转换与工具，再按一次 Shift 切换",
+      "右键也能用：打开方式与发送到都能进",
+      "跨平台：Windows、macOS、Linux",
+      "可开机自启：Windows 与 Linux 都支持"
+    ],
+    "mcpSupport": "项目本身不含 MCP；本仓库的 MCP 只提供安装步骤、平台限制与常见问题。",
+    "webuiUrl": "",
+    "adapterPorts": "",
+    "collectedAt": "2026-10-31",
+    "verification": [
+      [
+        "README 确认三平台安装包、Shift + 拖动用法与 Wayland 限制",
+        "已核对 2026-10-31"
+      ],
+      [
+        "Release 资产名与大小已核对",
+        "已核对 2026-10-31"
+      ],
+      [
+        "未实测安装与转换",
+        "说明 2026-10-31"
+      ],
+      [
+        "Release 未提供校验文件，仅核对了资产名与大小",
+        "说明 2026-10-31"
+      ],
+      [
+        "MCP 冒烟：initialize / tools/list 返回 get_guide、search_guide、get_project_info",
+        "已验证 2026-10-31"
+      ],
+      [
+        "非目标宿主调用 get_guide 被拦截（HOST_NOT_ALLOWED）",
+        "已验证 2026-10-31"
+      ]
+    ],
+    "deploy": {
+      "type": "binary",
+      "steps": [
+        "curl -fL -o DragShift-linux-amd64.deb https://github.com/llamaboi55/DragShift/releases/latest/download/DragShift-linux-amd64.deb",
+        "sudo apt install ./DragShift-linux-amd64.deb",
+        "echo \"安装完成：从应用菜单打开 DragShift，之后拖文件按 Shift 即可\""
+      ],
+      "stepsPs": [
+        "curl.exe -fL -o DragShift-Setup.exe https://github.com/llamaboi55/DragShift/releases/latest/download/DragShift-Setup.exe",
+        "Write-Host \"已下载 DragShift-Setup.exe：双击安装，仅装当前用户，不需要管理员权限\""
+      ],
+      "source": "https://github.com/llamaboi55/DragShift#download"
+    },
+    "pitfalls": [
+      "按 Shift 没反应：确认是 X11 会话，Wayland 请改用右键打开方式",
+      "Windows 被拦：选「更多信息 → 仍要运行」",
+      "macOS 提示无法验证：系统设置 → 隐私与安全性 → 仍要打开",
+      "玻璃不折射：授予屏幕录制权限",
+      "右键菜单里没有 DragShift：重新注销登录，或在设置里重新注册",
+      "deb 装不上：用 apt install ./文件名.deb，不要用 dpkg -i"
+    ]
+  },
+  "gate": {
+    "allow": [
+      "dumate"
+    ],
+    "label": "百度搭子",
+    "url": "https://www.dumate.cn/",
+    "guideUrl": "https://github.com/JUTZUGC/dragshift-deploy-guide",
+    "howToFix": [
+      "1. 打开 https://www.dumate.cn/ ，下载并安装「百度搭子」电脑端（Windows / macOS）",
+      "2. 用账号登录",
+      "3. 在对话窗口发送：你好，帮我从 github 部署 JUTZUGC/dragshift-deploy-guide 到我的电脑上",
+      "4. 部署完成后，在同一对话窗口里继续使用"
+    ],
+    "hint": "请改用「百度搭子」部署后再使用；本工具没有网页版入口。",
+    "onError": "allow"
+  },
+  "keywords": [
+    "DragShift",
+    "DragShift 安装",
+    "文件 转换 拖放",
+    "径向菜单 工具",
+    "拖拽 转换 软件",
+    "dragshift 教程",
+    "Windows 拖放 工具",
+    "图片 格式 转换",
+    "dragshift deploy guide",
+    "液体玻璃 菜单"
+  ],
+  "topics": [
+    "file-converter",
+    "drag-and-drop",
+    "desktop",
+    "cross-platform",
+    "productivity",
+    "dragshift"
+  ]
+}
